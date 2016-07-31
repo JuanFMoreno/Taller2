@@ -30,7 +30,12 @@
 BlackKey=false
 YellowKey=false
 RedKey=false
+RedKey1=false
+RedKey2=false
+RedKey3=false
 GreyKey=false
+GreyKey1=false
+GreyKey2=false
 </string>
           </argument>
         </arguments>
@@ -55,22 +60,22 @@ GreyKey=false
             <kind>1</kind>
             <string>///Movimiento del jugador
 
-if (!place_meeting(x-velocidad,y,objWall))&amp;&amp;(!place_meeting(x-velocidad,y,objDoorFather))&amp;&amp;(!place_meeting(x-velocidad,y,objBush))
+if (!place_meeting(x-velocidad,y,objWall))&amp;&amp;(!place_meeting(x-velocidad,y,objDoorFather))
 {
 if (keyboard_check(vk_left)){x=x-velocidad;}
 }
 
-if (!place_meeting(x+velocidad,y,objWall))&amp;&amp;(!place_meeting(x-velocidad,y,objDoorFather))&amp;&amp;(!place_meeting(x-velocidad,y,objBush))
+if (!place_meeting(x+velocidad,y,objWall))&amp;&amp;(!place_meeting(x+velocidad,y,objDoorFather))
 {
 if (keyboard_check(vk_right)){x=x+velocidad;}
 }
 
-if (!place_meeting(x,y-velocidad,objWall))&amp;&amp;(!place_meeting(x-velocidad,y,objDoorFather))&amp;&amp;(!place_meeting(x-velocidad,y,objBush))
+if (!place_meeting(x,y-velocidad,objWall))&amp;&amp;(!place_meeting(x,y-velocidad,objDoorFather))
 {
 if (keyboard_check(vk_up)){y=y-velocidad;}
 }
 
-if (!place_meeting(x,y+velocidad,objWall))&amp;&amp;(!place_meeting(x-velocidad,y,objBush))
+if (!place_meeting(x,y+velocidad,objWall))&amp;&amp;(!place_meeting(x,y+velocidad,objDoorFather))
 {
 if (keyboard_check(vk_down)){y=y+velocidad;}
 }
@@ -118,11 +123,46 @@ if (place_meeting(x,y,objRedKey))
     RedKey=true
     audio_play_sound(sndDiamond,10,false);
     }
+    
+if (place_meeting(x,y,objRedKey1))
+    {
+    with(objRedKey1){instance_destroy();}
+    RedKey1=true
+    audio_play_sound(sndDiamond,10,false);
+    }
+    
+if (place_meeting(x,y,objRedKey2))
+    {
+    with(objRedKey2){instance_destroy();}
+    RedKey2=true
+    audio_play_sound(sndDiamond,10,false);
+    }
 
+if (place_meeting(x,y,objRedKey3))
+    {
+    with(objRedKey3){instance_destroy();}
+    RedKey3=true
+    audio_play_sound(sndDiamond,10,false);
+    }
+        
 if (place_meeting(x,y,objGreyKey))
     {
     with(objGreyKey){instance_destroy();}
     GreyKey=true
+    audio_play_sound(sndDiamond,10,false);
+    }
+    
+if (place_meeting(x,y,objGreyKey1))
+    {
+    with(objGreyKey1){instance_destroy();}
+    GreyKey1=true
+    audio_play_sound(sndDiamond,10,false);
+    }
+    
+if (place_meeting(x,y,objGreyKey2))
+    {
+    with(objGreyKey2){instance_destroy();}
+    GreyKey2=true
     audio_play_sound(sndDiamond,10,false);
     }
 </string>
@@ -170,6 +210,18 @@ if(RedKey)
         audio_play_sound(sndDoor,10,false);}
     }
     
+if(RedKey1)&amp;&amp;(RedKey2)&amp;&amp;(RedKey3)
+    {
+    if(place_meeting(x+velocidad,y,objRedDoor1))||
+    (place_meeting(x-velocidad,y,objRedDoor1))||
+    (place_meeting(x,y+velocidad,objRedDoor1))||
+    (place_meeting(x,y-velocidad,objRedDoor1))
+        {
+        with(objRedDoor1){instance_destroy();
+        }
+        audio_play_sound(sndDoor,10,false);}
+    }
+        
         
 if(YellowKey)
     {
@@ -194,7 +246,21 @@ if(GreyKey)
         with(objGreyDoor){instance_destroy();
         }
         audio_play_sound(sndDoor,10,false);}
-    }                      
+    }      
+    
+if(GreyKey1)&amp;&amp;(GreyKey2)
+    {
+    if(place_meeting(x+velocidad,y,objGreyDoor1))||
+    (place_meeting(x-velocidad,y,objGreyDoor1))||
+    (place_meeting(x,y+velocidad,objGreyDoor1))||
+    (place_meeting(x,y-velocidad,objGreyDoor1))
+        {
+        with(objGreyDoor1){instance_destroy();
+        }
+        audio_play_sound(sndDoor,10,false);}
+    }
+    
+                    
 </string>
           </argument>
         </arguments>

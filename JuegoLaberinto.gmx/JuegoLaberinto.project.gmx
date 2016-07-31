@@ -39,6 +39,13 @@
       <sprite>sprites\sprDiamond4</sprite>
       <sprite>sprites\sprDiamond3</sprite>
     </sprites>
+    <sprite>sprites\sprGreyKey1</sprite>
+    <sprite>sprites\sprGreyKey2</sprite>
+    <sprite>sprites\sprRedKey1</sprite>
+    <sprite>sprites\sprRedKey2</sprite>
+    <sprite>sprites\sprRedKey3</sprite>
+    <sprite>sprites\sprGreyDoor1</sprite>
+    <sprite>sprites\sprRedDoor1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgndStart</background>
@@ -66,6 +73,8 @@
       <object>objects\objYellowDoor</object>
       <object>objects\objRedDoor</object>
       <object>objects\objDoorFather</object>
+      <object>objects\objRedDoor1</object>
+      <object>objects\objGreyDoor1</object>
     </objects>
     <object>objects\objStart</object>
     <objects name="objDiamonds">
@@ -76,6 +85,11 @@
       <object>objects\objDiamond3</object>
     </objects>
     <object>objects\objSound</object>
+    <object>objects\objGreyKey1</object>
+    <object>objects\objGreyKey2</object>
+    <object>objects\objRedKey1</object>
+    <object>objects\objRedKey2</object>
+    <object>objects\objRedKey3</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Start</room>
@@ -84,6 +98,7 @@
     <room>rooms\Level3</room>
     <room>rooms\Level4</room>
     <room>rooms\Level5</room>
+    <room>rooms\Level6</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
