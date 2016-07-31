@@ -99,6 +99,7 @@
     <room>rooms\Level4</room>
     <room>rooms\Level5</room>
     <room>rooms\Level6</room>
+    <room>rooms\Level7</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
