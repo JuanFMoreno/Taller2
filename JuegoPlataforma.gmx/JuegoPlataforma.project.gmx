@@ -9,12 +9,16 @@
     <sprite>sprites\sprBlock</sprite>
     <sprite>sprites\sprBall</sprite>
     <sprite>sprites\sprBonus</sprite>
+    <sprite>sprites\sprSuperBall</sprite>
+    <sprite>sprites\sprEnemy</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\objBlock</object>
     <object>objects\objBall</object>
+    <object>objects\objBonus</object>
+    <object>objects\objEnemy</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\LevelPrueba</room>
