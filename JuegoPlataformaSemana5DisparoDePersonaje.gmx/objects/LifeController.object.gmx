@@ -83,14 +83,13 @@ if(lives &lt;= 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(sprBottom, -1, 0, 404);
-draw_set_colour(c_yellow);
+            <string>draw_set_colour(c_yellow);
 
-draw_healthbar(12, 449, 138, 459, health, c_black, c_red, c_green, 0, true, false);
+draw_healthbar(view_xview[0] + 12, view_yview[0] + 440, view_xview[0] + 138, view_yview[0] + 460, health, c_black, c_red, c_green, 0, true, false);
 
 for(i = 0; i &lt; lives; i += 1)
     {
-    draw_sprite(sprLife, -1, 16+32*i, 410)
+    draw_sprite(sprLife, -1, view_xview[0] + 18+32*i, view_yview[0] + 425)
     };
 
 </string>

@@ -96,10 +96,30 @@ if (place_meeting(x, y, objBall))
         }
     else
         {
-        room_restart ();
+        health -= 20
+        instance_destroy()
         }
     }
 
+if (place_meeting(x, y, objBulletRight))
+    {
+    sprite_index = sprExplosion
+    instance_destroy()
+    with(objBulletRight)
+        {
+        instance_destroy()
+        }
+    }
+    
+if (place_meeting(x, y, objBulletLeft))
+    {
+    sprite_index = sprExplosion
+    instance_destroy()
+    with(objBulletLeft)
+        {
+        instance_destroy()
+        }
+    }
 </string>
           </argument>
         </arguments>
@@ -142,62 +162,8 @@ if (place_meeting(x, y, objBall))
             <kind>1</kind>
             <string>/// Disparo
   
-    instance_create(x, y, objEnemyBullet);
+instance_create(x, y, objEnemyBullet);
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objBulletLeft">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(objBulletLeft)
-    {
-    instance_destroy()
-    }
-instance_destroy()
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objBulletRight">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(objBulletRight)
-    {
-    instance_destroy()
-    }
-instance_destroy()
 </string>
           </argument>
         </arguments>

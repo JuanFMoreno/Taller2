@@ -22,6 +22,7 @@
     <sprite>sprites\sprEnemyBullet</sprite>
     <sprite>sprites\sprBottom</sprite>
     <sprite>sprites\sprButtonRestart</sprite>
+    <sprite>sprites\sprExplosion</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\backGameOver</background>
