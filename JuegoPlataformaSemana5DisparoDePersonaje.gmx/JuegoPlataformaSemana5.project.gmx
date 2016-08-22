@@ -38,6 +38,7 @@
     <object>objects\objEnemyBullet</object>
     <object>objects\LifeController</object>
     <object>objects\objButtonRestart</object>
+    <object>objects\objGoal</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Level1</room>

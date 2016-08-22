@@ -176,6 +176,14 @@ if (vsp &gt; 1)
     sprite_index = sprFall
     }
 
+if (place_meeting(x, y, objGoal))
+    {
+    room_goto(2);
+    with(objGoal)
+        {
+        instance_destroy()
+        }
+    }
 
 </string>
           </argument>
